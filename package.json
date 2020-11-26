@@ -1,16 +1,42 @@
 {
-  "name": "vue-components",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@mayifit/vue-components",
+  "version": "0.0.1",
+  "author": {
+    "name": "MayIFit",
+    "email": "contact@mayifit.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MayIFit/vue-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MayIFit/vue-components/issues"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "*.json",
+    "*.js"
+  ],
+  "main": "dist/vue-components.common.js",
+  "module": "dist/vue-components.js",
+  "unpkg": "dist/vue-components.min.js",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-bundle": "vue-cli-service build --target lib --name vue-components ./src/index.ts"
+  },
+  "peerDependencies": {
+    "@tailwindcss/ui": "^0.7.2",
+    "tailwindcss": "^1.9.6",
+    "core-js": "^3.6.5",
+    "portal-vue": "^2.1.7",
+    "vue": "^2.6.11"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.2"
   },
@@ -34,7 +60,9 @@
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "@tailwindcss/ui": "^0.7.2",
+    "tailwindcss": "^1.9.6"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
