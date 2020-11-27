@@ -19,7 +19,7 @@ export default class Button extends Vue {
         type: String,
         default: ""
     })
-    classlist!: string;
+    classList!: string;
 
     protected priorityClasses =
         "text-white bg-gray-800 hover:bg-gray-700 active:bg-gray-900 focus:border-gray-900 focus:shadow-outline-gray";
@@ -39,7 +39,7 @@ export default class Button extends Vue {
                     disabled: this.disabled,
                     class: [
                         this.priorityClasses,
-                        this.classlist,
+                        this.classList,
                         this.disabled ? "cursor-not-allowed" : "",
                         "inline-flex items-center px-4 py-2 rounded-md font-semibold text-xs uppercase tracking-widest focus:outline-none transition ease-in-out duration-150"
                     ]
